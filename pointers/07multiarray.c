@@ -2,8 +2,8 @@
 
 int main() {
     int matrix[3][3] = {{3, 6, 9}, {2, 4, 8}, {1, 5, 7}};
-    printf("Address of matrix: %p\n", matrix); // name of the array is first element in all dimensions
-    printf("Address of matrix: %p\n\n", *matrix); // matrix == *matrix
+    printf("Address of matrix (name): %p\n", matrix); // name of the array is first element in all dimensions
+    printf("Address of matrix (*name): %p\n\n", *matrix); // matrix == *matrix
 
     printf("Size of one element: %ld \n", sizeof(int));
     printf("First element of 1st row : %d Address : %p ", **(matrix+0), matrix);
