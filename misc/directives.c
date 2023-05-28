@@ -6,9 +6,10 @@
 
 /* 
 //  "#define": This directive is used to define constants or macros. 
-//  In the example, we define "PI" as 100.
+//  In the example, we define "MAX_VALUE" as 100.
 */
-#define PI 3.14159
+#define PI 100
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
 
 /*
 //  "#ifndef" and "#endif": These directives are used to check if a particular
@@ -23,10 +24,10 @@
 //  If "DEBUG" is defined and has a non-zero value, the "LOG" macro will be defined to print debug messages. 
 //  Otherwise, LOG will be defined as an empty macro.
 */
-#if DEBUG
-    #define LOG(msg) printf("[DEBUG] %s\n", msg)
+#ifdef DEBUG
+    #define DEBUG_LOG(msg) printf("Debug: %s\n", msg)
 #else
-    #define LOG(msg)
+    #define DEBUG_LOG(msg)
 #endif
 
 /*
